@@ -20,7 +20,7 @@ pipeline {
     }
     cleanup {
       script {
-        slackSend message: "color: "${slackColor}", message: "*${buildStatus}*: `${env.JOB_NAME}` *#${env.BUILD_NUMBER}* \n<${env.BUILD_URL}/console|Console Log>" 
+        slackSend message: "color: "${slackColor}", message: "${buildStatus}" 
       }
     }
   }
