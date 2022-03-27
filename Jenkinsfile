@@ -1,5 +1,6 @@
 def buildStatus    = "FAILED"
 def slackColor     = "warning"
+def slackChannelID = 'C035MHTT1SR'
 
 pipeline {
   agent any
@@ -23,7 +24,7 @@ pipeline {
     }
     cleanup {
       script {
-        slackSend color: "${slackColor}", message: "${buildStatus}", `${env.JOB_NAME}`
+        slackSend channel: "C035MHTT1SR", color: "${slackColor}", message: "*${buildStatus}*: `${env.JOB_NAME}` *#${env.BUILD_NUMBER}* \n<${env.BUILD_URL}/console|Console Log>"
       }
     }
   }
