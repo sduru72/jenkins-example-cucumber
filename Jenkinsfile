@@ -3,6 +3,9 @@ def slackColor     = "warning"
 
 pipeline {
   agent any
+  triggers{
+    cron 'H 2,16 * * *'
+  }
   stages {
     stage('Run Tests') {
       steps {
