@@ -1,7 +1,6 @@
 def buildStatus    = "FAILED"
 def slackColor     = "warning"
 def slackChannelID = 'C035MHTT1SR'
-String cron_string = BRANCH_NAME == "main" ? "H 2,16 * * *" : ""
 
 pipeline {
   agent any
