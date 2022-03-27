@@ -20,7 +20,7 @@ pipeline {
     }
     cleanup {
       script {
-        slackSend message: "color: "${slackColor}", message: "${buildStatus}" 
+        slackSend color: "${slackColor}", message: "${buildStatus}" 
       }
     }
   }
