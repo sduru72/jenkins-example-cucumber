@@ -15,6 +15,9 @@ pipeline {
     }
   }
   post{
+    always{
+      junit '**/surefire-reports/*.xml'
+    }
     success {
       script {
         buildStatus = "SUCCESS"
