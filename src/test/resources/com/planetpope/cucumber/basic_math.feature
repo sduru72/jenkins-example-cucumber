@@ -5,4 +5,4 @@ Feature: basic math
     Given x=2
     And y=2
     When x and y are added
-    Then the value should be 6
+    Then the value should be 4
