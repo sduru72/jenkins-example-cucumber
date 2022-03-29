@@ -11,7 +11,6 @@ pipeline {
     stage('Run Tests') {
       steps {
         sh './mvnw clean test'
-        slackSend message: 'test passed'
       }
     }
   }
